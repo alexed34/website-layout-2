@@ -1,0 +1,8 @@
+venv/*
+db.sqlite3
+.idea/*
+.idea/dataSources.xml
+*/__pycache__/*
+__pycache__
+.idea
+media/*
