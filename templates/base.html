@@ -6,18 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Для проверяющего.
-  мне не очень нравится эта конструкция с if для  подстановки title.
-  Я понимаю что при  большем колличестве типов страниц будут проблемы.
-  Но как сделать что то типа {{title}} не знаю., я не смог найти как это сделать. -->
 
-  {% if request.path  == '/contact/' %}
-    <title>Sensive Blog - Contact </title>
-  {% elif request.path  == '/' %}
-    <title>Sensive Blog - Home </title>
-  {% else %}
-    <title>Sensive Blog - Post </title>
-  {% endif %}
+  <title>Sensive Blog - {% block title %} {% endblock %}.</title>
   <link rel="icon" href="{% static '/img/favicon.png'  %}" type="image/png">
 
   <link rel="stylesheet" href="{%static '/styles.min.css'%}">
